@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" viewBox="0 0 340 200">
+  <rect x="1" y="1" width="338" height="198" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="12" y="12" width="316" height="30" rx="6" fill="#0f5132"/>
+  <circle cx="30" cy="27" r="8" fill="#ef4444"/>
+  <circle cx="30" cy="27" r="3" fill="#16a34a"/>
+  <text x="48" y="31" font-size="14" font-family="Arial, sans-serif" fill="#ffffff" font-weight="700">National Identity Card</text>
+  <rect x="16" y="52" width="90" height="110" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="28" y="68" width="66" height="78" rx="4" fill="#cbd5e1"/>
+  <text x="45" y="108" font-size="11" font-family="Arial, sans-serif" fill="#475569">PHOTO</text>
+  <rect x="118" y="52" width="206" height="110" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="126" y="74" font-size="11" font-family="Arial, sans-serif" fill="#334155">Name: Fatema Begum</text>
+  <text x="126" y="94" font-size="11" font-family="Arial, sans-serif" fill="#334155">Father: Md. Kamal Hossain</text>
+  <text x="126" y="114" font-size="11" font-family="Arial, sans-serif" fill="#334155">Date of Birth: 18 Mar 1992</text>
+  <text x="126" y="134" font-size="11" font-family="Arial, sans-serif" fill="#334155">NID No: 19876543210987654</text>
+  <rect x="118" y="142" width="206" height="16" rx="3" fill="#16a34a"/>
+  <rect x="118" y="150" width="206" height="8" rx="3" fill="#ef4444"/>
+  <text x="16" y="184" font-size="10" font-family="Arial, sans-serif" fill="#64748b">People's Republic of Bangladesh</text>
+</svg>

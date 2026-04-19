@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="396" viewBox="0 0 280 396">
+  <rect x="1" y="1" width="278" height="394" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="12" y="12" width="256" height="30" rx="4" fill="#e2e8f0"/>
+  <text x="20" y="32" font-size="14" font-family="Arial, sans-serif" fill="#0f172a" font-weight="700">Loan Application Form</text>
+  <text x="18" y="60" font-size="10" font-family="Arial, sans-serif" fill="#334155">Applicant Name</text>
+  <rect x="18" y="66" width="244" height="24" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="24" y="82" font-size="11" font-family="Arial, sans-serif" fill="#0f172a">Md. Hasan Ali</text>
+  <text x="18" y="104" font-size="10" font-family="Arial, sans-serif" fill="#334155">NID Number</text>
+  <rect x="18" y="110" width="244" height="24" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="24" y="126" font-size="11" font-family="Arial, sans-serif" fill="#0f172a">19912654321098765</text>
+  <text x="18" y="148" font-size="10" font-family="Arial, sans-serif" fill="#334155">Loan Amount</text>
+  <rect x="18" y="154" width="244" height="24" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="24" y="170" font-size="11" font-family="Arial, sans-serif" fill="#0f172a">750000</text>
+  <text x="18" y="192" font-size="10" font-family="Arial, sans-serif" fill="#334155">Loan Purpose</text>
+  <rect x="18" y="198" width="244" height="24" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="24" y="214" font-size="11" font-family="Arial, sans-serif" fill="#0f172a">Working Capital</text>
+  <rect x="18" y="236" width="244" height="78" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="24" y="254" font-size="11" font-family="Arial, sans-serif" fill="#0f172a" font-weight="700">Guarantor Section</text>
+  <text x="24" y="272" font-size="10" font-family="Arial, sans-serif" fill="#334155">Guarantor Name: Sadia Rahman</text>
+  <rect x="24" y="279" width="104" height="24" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="50" y="295" font-size="9" font-family="Arial, sans-serif" fill="#64748b">Signature</text>
+  <text x="18" y="332" font-size="10" font-family="Arial, sans-serif" fill="#334155">Applicant Signature</text>
+  <rect x="18" y="338" width="120" height="28" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="162" y="355" font-size="10" font-family="Arial, sans-serif" fill="#dc2626">Reference Contact: [empty]</text>
+</svg>
