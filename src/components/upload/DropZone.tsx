@@ -1,6 +1,7 @@
 import { Camera, FolderOpen, UploadCloud, X } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
 import { ImageThumbnail } from './ImageThumbnail';
 import { useDocumentStore } from '../../store/documentStore';
@@ -47,6 +48,7 @@ export function DropZone({ documentType }: DropZoneProps) {
   const [isDragOver, setIsDragOver] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showPicker, setShowPicker] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const zoneState: ZoneState = selectedFile ? 'FILE_SELECTED' : isDragOver ? 'DRAG_OVER' : 'IDLE';
 
@@ -189,6 +191,7 @@ export function DropZone({ documentType }: DropZoneProps) {
                 e?.stopPropagation();
                 clearDocument();
               }}
+              onImageClick={() => setIsFullscreen(true)}
             />
             <div style={{ marginTop: 8, width: '100%' }}>
               <Button
@@ -226,6 +229,69 @@ export function DropZone({ documentType }: DropZoneProps) {
       </motion.div>
 
       {error ? <span style={{ fontSize: 12, color: 'var(--text-heading)' }}>{error}</span> : null}
+
+      {createPortal(
+        <AnimatePresence>
+          {isFullscreen && imagePreviewUrl && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsFullscreen(false)}
+              style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 99999,
+                backgroundColor: 'rgba(0, 0, 0, 0.85)',
+                display: 'grid',
+                placeItems: 'center',
+                padding: 16,
+              }}
+            >
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsFullscreen(false);
+                }}
+                style={{
+                  position: 'absolute',
+                  top: 24,
+                  right: 24,
+                  width: 40,
+                  height: 40,
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                  border: 'none',
+                  color: 'white',
+                  display: 'grid',
+                  placeItems: 'center',
+                  cursor: 'pointer',
+                  zIndex: 100000,
+                }}
+              >
+                <X size={24} />
+              </button>
+              <motion.img
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                src={imagePreviewUrl}
+                alt="Full screen preview"
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  objectFit: 'contain',
+                  borderRadius: 12,
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </div>
   );
 }

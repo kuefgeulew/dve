@@ -8,6 +8,7 @@ interface ImageThumbnailProps {
   previewUrl: string | null;
   documentType: DocumentType;
   onClear: (e?: React.MouseEvent) => void;
+  onImageClick?: () => void;
 }
 
 function formatFileSize(file: File | null): string {
@@ -22,7 +23,7 @@ function truncateFileName(name: string): string {
   return `${name.slice(0, 21)}...`;
 }
 
-export function ImageThumbnail({ file, previewUrl, documentType, onClear }: ImageThumbnailProps) {
+export function ImageThumbnail({ file, previewUrl, documentType, onClear, onImageClick }: ImageThumbnailProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -58,7 +59,15 @@ export function ImageThumbnail({ file, previewUrl, documentType, onClear }: Imag
         <X size={12} />
       </button>
 
-      <div style={{ borderRadius: 10, overflow: 'hidden' }}>
+      <div 
+        style={{ borderRadius: 10, overflow: 'hidden', cursor: onImageClick ? 'pointer' : 'default' }}
+        onClick={(e) => {
+          if (onImageClick) {
+            e.stopPropagation();
+            onImageClick();
+          }
+        }}
+      >
         {previewUrl ? (
           <img
             src={previewUrl}
